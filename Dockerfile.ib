@@ -1,6 +1,6 @@
 FROM immortalwrt:base
 
-LABEL maintainer=tom8832
+LABEL maintainer="tom8832"
 
 COPY --chown=build:build ./ib /home/build/immortalwrt
 RUN chown build:build /home/build/immortalwrt/
