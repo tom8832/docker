@@ -59,10 +59,10 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            immortalwrt/rootfs:${{ github.event.inputs.arch }}-${{ github.event.inputs.branch }}
-            immortalwrt/rootfs:${{ github.event.inputs.arch }}-${{ github.event.inputs.version }}
-            immortalwrt/rootfs:${{ github.event.inputs.target }}-${{ github.event.inputs.branch }}
-            immortalwrt/rootfs:${{ github.event.inputs.target }}-${{ github.event.inputs.version }}
+            tom8832/rootfs:${{ github.event.inputs.arch }}-${{ github.event.inputs.branch }}
+            tom8832/rootfs:${{ github.event.inputs.arch }}-${{ github.event.inputs.version }}
+            tom8832/rootfs:${{ github.event.inputs.target }}-${{ github.event.inputs.branch }}
+            tom8832/rootfs:${{ github.event.inputs.target }}-${{ github.event.inputs.version }}
 
       - name: Push extra tags for snapshot
         if: ${{ github.event.inputs.version == 'snapshot' }}
