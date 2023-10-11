@@ -56,13 +56,13 @@ jobs:
         with:
           context: .
           file: ./Dockerfile.rootfs
-          platforms: linux/amd64
+          platforms: linux/arm64/v8
           push: true
           tags: |
-            tom8832/rootfs:${{ github.event.inputs.arch }}-${{ github.event.inputs.branch }}
-            tom8832/rootfs:${{ github.event.inputs.arch }}-${{ github.event.inputs.version }}
-            tom8832/rootfs:${{ github.event.inputs.target }}-${{ github.event.inputs.branch }}
-            tom8832/rootfs:${{ github.event.inputs.target }}-${{ github.event.inputs.version }}
+            tom8832/immortalwrt:${{ github.event.inputs.arch }}-${{ github.event.inputs.branch }}
+            tom8832/immortalwrt:${{ github.event.inputs.arch }}-${{ github.event.inputs.version }}
+            tom8832/immortalwrt:${{ github.event.inputs.target }}-${{ github.event.inputs.branch }}
+            tom8832/immortalwrt:${{ github.event.inputs.target }}-${{ github.event.inputs.version }}
 
       - name: Push extra tags for snapshot
         if: ${{ github.event.inputs.version == 'snapshot' }}
