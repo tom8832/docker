@@ -1,5 +1,5 @@
 FROM scratch
-LABEL maintainer="Tianling Shen <cnsztl@immortalwrt.org>"
+LABEL maintainer=tom8832
 
 ADD ./rootfs/ /
 
