@@ -56,7 +56,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile.rootfs
-          platforms: linux/arm64/v8
+          platforms: linux/arm64
           push: true
           tags: |
             tom8832/immortalwrt:${{ github.event.inputs.arch }}-${{ github.event.inputs.branch }}
