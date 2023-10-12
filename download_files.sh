@@ -28,7 +28,7 @@ function verify_shasum(){
 case "$1" in
 "ib")
 	#IB_NAME="$(curl -fsSL "$DOWNLOAD_URL/$DOWNLOAD_PATH/sha256sums" | grep -E "imagebuilder-(.*)${TARGET%-*}" | cut -d "*" -f 2)"
- 	IB_NAME="$DOWNLOAD_URL/$DOWNLOAD_PATH/immortalwrt-21.02.7-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz"
+ 	IB_NAME="immortalwrt-21.02.7-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz"
 	curl --retry 3 --retry-all-errors --retry-delay 10 -fLO "$DOWNLOAD_URL/$DOWNLOAD_PATH/$IB_NAME"
 	verify_shasum "$IB_NAME"
 	mkdir -p "ib"
