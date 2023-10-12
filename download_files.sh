@@ -34,7 +34,7 @@ case "$1" in
 	mkdir -p "ib"
         sudo apt-get install p7zip-full
 	#tar -vxf "$IB_NAME" -C "ib"/ --strip-components 1
- 	7z x "$IB_NAME" -o "ib"
+ 	7z x "$IB_NAME" -o"ib"/
 	;;
 "rootfs")
 	ROOTFS_NAME="$(curl -fsSL "$DOWNLOAD_URL/$DOWNLOAD_PATH/sha256sums" | grep "\-rootfs.tar.gz" | cut -d "*" -f 2)"
