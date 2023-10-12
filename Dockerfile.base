@@ -2,15 +2,12 @@ FROM debian:11
 
 RUN apt-get update -qq && \
     apt-get install -y \
-        lib32z1 \
         build-essential \
         ccache \
         clang \
         curl \
         file \
-        g++-multilib \
         gawk \
-        gcc-multilib \
         gettext \
         git \
         libdw-dev \
