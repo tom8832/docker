@@ -32,7 +32,9 @@ case "$1" in
 	curl --retry 3 --retry-all-errors --retry-delay 10 -fLO "$DOWNLOAD_URL/$DOWNLOAD_PATH/$IB_NAME"
 	verify_shasum "$IB_NAME"
 	mkdir -p "ib"
-	tar -vxf "$IB_NAME" -C "ib"/ --strip-components 1
+        sudo apt-get install p7zip-full
+	#tar -vxf "$IB_NAME" -C "ib"/ --strip-components 1
+ 	7z x "$IB_NAME" -o "ib"
 	;;
 "rootfs")
 	ROOTFS_NAME="$(curl -fsSL "$DOWNLOAD_URL/$DOWNLOAD_PATH/sha256sums" | grep "\-rootfs.tar.gz" | cut -d "*" -f 2)"
