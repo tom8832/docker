@@ -68,5 +68,5 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            tom8832/imagebuilder:${{ github.event.inputs.target }}-${{ github.event.inputs.branch }}
-            tom8832/imagebuilder:${{ github.event.inputs.target }}-${{ github.event.inputs.version }}
+            tom8832/immortalwrt:${{ github.event.inputs.target }}-${{ github.event.inputs.branch }}
+            tom8832/immortalwrt:${{ github.event.inputs.target }}-${{ github.event.inputs.version }}
